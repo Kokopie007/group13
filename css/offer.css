@@ -1,0 +1,205 @@
+/* Basic Reset for page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #e67e22;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.main-navigation {
+    margin-top: 10px;
+}
+
+.main-navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.main-navigation a:hover {
+    color: #ffd54f;
+}
+
+/* Daily Deals Section */
+section.daily-deal {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.caption {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Grid Layout for Deals */
+.daily-deal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+.deal-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+}
+
+.deal-card:hover {
+    transform: scale(1.03);
+}
+
+.deal-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.deal-card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.deal-card p {
+    margin: 0 10px 15px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.multicol-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three columns */
+    gap: 1rem;
+}
+.multicol-container div {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+h3 {
+    margin-top: 0;
+}
+/* Button and Navigation Styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.button {
+    padding: 15px 40px;
+    font-size: 1em;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+
+.button:focus {
+    outline: 3px solid #e67e22;
+    outline-offset: 3px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+footer a:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section.daily-deal {
+        margin: 20px;
+        padding: 15px;
+    }
+    .daily-deal-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+    .multicol-container {
+        grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+    }
+    .button-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button {
+        padding: 10px 30px;
+        font-size: 0.9em;
+    }
+}
